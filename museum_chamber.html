@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Our Little Museum</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="gallery_atmosphere.css">
+</head>
+
+<body>
+
+<!-- AUDIO -->
+<audio id="clickSound" src="click-sound.mp3" preload="auto"></audio>
+
+<!-- CURSOR -->
+<div class="heart-cursor"></div>
+
+<!-- OVERLAY DETAIL -->
+<div class="detail-overlay hidden">
+    <div class="detail-frame">
+        <h2 id="detailTitle"></h2>
+        <span id="detailDate"></span>
+        <p id="detailDesc"></p>
+    </div>
+</div>
+
+<section class="museum-stage">
+    <h1 class="museum-title">Our Little Museum</h1>
+
+    <div class="exhibition-row">
+
+        <article class="museum-frame" data-title="Photobooth Pertama Kita" data-date="2026" data-desc="Photobooth pertama kita di 2026📸.">
+            <div class="photo-slot" style="background-image:url('photo1.jpg')"></div>
+            <p class="plaque">photism📸</p>
+        </article>
+
+        <article class="museum-frame" data-title="Ulang Tahun sayangg" data-date="12 Oktober 2025" data-desc="enang banget bisa ngerayain ulang tahun sayangg dan lihat sayagg bahagia😍❤️..">
+            <div class="photo-slot" style="background-image:url('photo2.jpg')"></div>
+            <p class="plaque">ulang tahunn sayangg😍❤️🎉 </p>
+        </article>
+
+        <article class="museum-frame" data-title="ulang tahun aku" data-date="22 Juli 2025" data-desc="Ulang tahun yang terasa lebih spesial karena sayagg ada di samping aku😍❤️.">
+            <div class="photo-slot" style="background-image:url('photo3.jpg')"></div>
+            <p class="plaque">ulang tahun aku hihi🎉</p>
+        </article>
+
+        <article class="museum-frame" data-title="Jatinangor" data-date="2025" data-desc="ketemuu dd cayangg😍.">
+            <div class="photo-slot" style="background-image:url('photo4.jpg')"></div>
+            <p class="plaque">jatinangor🍱</p>
+        </article>
+
+        <article class="museum-frame" data-title="Photobooth Pertama Kita" data-date="2026" data-desc="Photobooth pertama kita di 2026📸.">
+            <div class="photo-slot" style="background-image:url('photo5.jpg')"></div>
+            <p class="plaque">photism📸</p>
+        </article>
+
+    </div>
+
+   <a href="promise.html" style="text-decoration: none;">
+    <button class="nav-btn prev">← Previous</button>
+</a>
+
+<a href="final-dream..html" style="text-decoration: none;">
+    <button class="nav-btn next">Next →</button>
+</a>
+</section>
+
+<script src="interaction_engine.js"></script>
+</body>
+</html>

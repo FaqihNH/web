@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>See You on the Next 5th 💗</title>
+    <link rel="stylesheet" href="closing-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Background gradient -->
+    <div class="background-gradient"></div>
+    
+    <!-- Heart cursor trail -->
+    <div class="heart-cursor-trail"></div>
+    
+    <!-- Special gift popup (hidden by default) -->
+    <div class="gift-popup">
+        <div class="gift-content">
+            <div class="gift-close"><i class="fas fa-times"></i></div>
+            <div class="gift-heart"><i class="fas fa-heart"></i></div>
+            <h3>A Special Gift for You</h3>
+            <p class="gift-message">"Every moment with you feels like a beautiful promise. I can't wait for our next 5th together. This hug is from me to you, until we meet again."</p>
+            <div class="hug-animation">
+                <div class="person person-1">🤗</div>
+                <div class="person person-2">💕</div>
+            </div>
+            <div class="sticker-collection">
+                <div class="sticker">💌</div>
+                <div class="sticker">🌹</div>
+                <div class="sticker">✨</div>
+                <div class="sticker">🥰</div>
+            </div>
+            <button class="save-memory-btn">
+                <i class="fas fa-save"></i> Save This Memory
+            </button>
+        </div>
+    </div>
+    
+    <!-- Confetti container -->
+    <div class="confetti-container"></div>
+    
+    <!-- Main content container -->
+    <div class="content-container">
+        <!-- Glowing number 5 with pulse animation -->
+        <div class="glowing-five">
+            <div class="five-number">5</div>
+            <div class="heart-pulse"></div>
+        </div>
+        
+        <!-- Main text -->
+        <h1 class="main-text">Our day doesn't end here.</h1>
+        
+        <!-- Subtext -->
+        <p class="subtext">We'll meet again, on the next 5th <span class="heart-emoji">💗</span></p>
+        
+        <!-- Buttons container -->
+        <div class="buttons-container">
+            <a href="museum_chamber.html" class="nav-link">
+                <button class="nav-button prev-button">
+                    <i class="fas fa-arrow-left"></i> Back to Memories
+                </button>
+            </a>
+            
+            <button class="action-button" id="specialButton">
+                I'll be here <span class="button-heart">💕</span>
+                <div class="heart-particles"></div>
+            </button>
+            
+            <button class="nav-button next-button" id="futureButton">
+                Our Future <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+        
+        <!-- Love message that appears after button click -->
+        <div class="love-message" id="loveMessage">
+            <div class="message-content">
+                <div class="message-heart"><i class="fas fa-heart"></i></div>
+                <p>Our love grows stronger with every passing day. Thank you for being part of this beautiful journey.</p>
+            </div>
+        </div>
+        
+        <!-- Small decorative hearts -->
+        <div class="decorative-hearts">
+            <div class="heart-icon"><i class="fas fa-heart"></i></div>
+            <div class="heart-icon"><i class="fas fa-heart"></i></div>
+            <div class="heart-icon"><i class="fas fa-heart"></i></div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <div class="footer-note">
+        Made with <i class="fas fa-heart"></i> for eternal romance
+    </div>
+    
+    <!-- Audio for background music (hidden) -->
+    <audio id="backgroundMusic" loop>
+        <source src="https://assets.mixkit.co/music/preview/mixkit-loving-you-117.mp3" type="audio/mpeg">
+    </audio>
+    
+    <script src="romantic-script.js"></script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalender Spesial - Februari 2026 💕</title>
+    <link rel="stylesheet" href="calendar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="bg-elements">
+        <div class="floating-heart">💖</div>
+        <div class="floating-heart">💗</div>
+        <div class="floating-heart">💓</div>
+        <div class="floating-heart">💞</div>
+        <div class="floating-heart">💕</div>
+        <div class="floating-heart">💘</div>
+    </div>
+    
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Calendar Page -->
+        <div id="calendar-page" class="page active">
+            <div class="card calendar-card animate__animated animate__fadeIn">
+                <div class="header">
+                    <h1 class="title">Februari 2026</h1>
+                    <p class="subtitle">Bulan penuh cinta dan kenangan 💖</p>
+                    <div class="month-header">
+                        <div class="month-emoji">🌹</div>
+                        <h2 class="month-name">February</h2>
+                        <div class="month-emoji">💐</div>
+                    </div>
+                </div>
+                
+                <!-- Calendar Grid -->
+                <div class="calendar-wrapper">
+                    <div class="weekdays">
+                        <div class="day-name">Minggu</div>
+                        <div class="day-name">Senin</div>
+                        <div class="day-name">Selasa</div>
+                        <div class="day-name">Rabu</div>
+                        <div class="day-name">Kamis</div>
+                        <div class="day-name">Jumat</div>
+                        <div class="day-name">Sabtu</div>
+                    </div>
+                    
+                    <div class="calendar-grid" id="calendar-grid">
+                        <!-- Week 1 -->
+                        <div class="date-cell empty"></div>
+                        <div class="date-cell empty"></div>
+                        <div class="date-cell empty"></div>
+                        <div class="date-cell empty"></div>
+                        <div class="date-cell special-date" id="date-5" data-date="5">
+                            <div class="date-number">5</div>
+                            <div class="heart-icon">💗</div>
+                            <div class="date-tooltip">Our day 💗</div>
+                        </div>
+                        <div class="date-cell" data-date="6">
+                            <div class="date-number">6</div>
+                        </div>
+                        <div class="date-cell" data-date="7">
+                            <div class="date-number">7</div>
+                        </div>
+                        
+                        <!-- Week 2 -->
+                        <div class="date-cell" data-date="8">
+                            <div class="date-number">8</div>
+                        </div>
+                        <div class="date-cell" data-date="9">
+                            <div class="date-number">9</div>
+                        </div>
+                        <div class="date-cell" data-date="10">
+                            <div class="date-number">10</div>
+                        </div>
+                        <div class="date-cell" data-date="11">
+                            <div class="date-number">11</div>
+                        </div>
+                        <div class="date-cell" data-date="12">
+                            <div class="date-number">12</div>
+                        </div>
+                        <div class="date-cell" data-date="13">
+                            <div class="date-number">13</div>
+                        </div>
+                        <div class="date-cell" data-date="14">
+                            <div class="date-number">14</div>
+                        </div>
+                        
+                        <!-- Week 3 -->
+                        <div class="date-cell" data-date="15">
+                            <div class="date-number">15</div>
+                        </div>
+                        <div class="date-cell" data-date="16">
+                            <div class="date-number">16</div>
+                        </div>
+                        <div class="date-cell" data-date="17">
+                            <div class="date-number">17</div>
+                        </div>
+                        <div class="date-cell" data-date="18">
+                            <div class="date-number">18</div>
+                        </div>
+                        <div class="date-cell" data-date="19">
+                            <div class="date-number">19</div>
+                        </div>
+                        <div class="date-cell" data-date="20">
+                            <div class="date-number">20</div>
+                        </div>
+                        <div class="date-cell" data-date="21">
+                            <div class="date-number">21</div>
+                        </div>
+                        
+                        <!-- Week 4 -->
+                        <div class="date-cell" data-date="22">
+                            <div class="date-number">22</div>
+                        </div>
+                        <div class="date-cell" data-date="23">
+                            <div class="date-number">23</div>
+                        </div>
+                        <div class="date-cell" data-date="24">
+                            <div class="date-number">24</div>
+                        </div>
+                        <div class="date-cell" data-date="25">
+                            <div class="date-number">25</div>
+                        </div>
+                        <div class="date-cell" data-date="26">
+                            <div class="date-number">26</div>
+                        </div>
+                        <div class="date-cell" data-date="27">
+                            <div class="date-number">27</div>
+                        </div>
+                        <div class="date-cell" data-date="28">
+                            <div class="date-number">28</div>
+                        </div>
+                    </div>
+                    
+                    <div class="calendar-footer">
+                        <p class="calendar-note"><i class="fas fa-heart"></i> Tanggal 5 Februari adalah hari spesial kita sayangg!</p>
+                    </div>
+                </div>
+                
+                <div class="hint">
+                    <i class="fas fa-mouse-pointer"></i> Klik tanggal 5 nyaaa sayangg
+                </div>
+            </div>
+        </div>
+        
+        <!-- Special Date Reveal Page -->
+        <div id="reveal-page" class="page">
+            <div class="card reveal-card">
+                <div class="blur-overlay"></div>
+                <div class="reveal-content">
+                    <div class="date-focus" id="date-focus">
+                        <div class="focused-date">5</div>
+                        <div class="focus-heart">💖</div>
+                    </div>
+                    
+                    <div class="reveal-message animate__animated" id="reveal-message">
+                        <h2 class="message-title">Setiap Tanggal 5</h2>
+                        <p class="message-text">"Aku memilihh untukk samaa sayangg selaluu dann selaluuu😍"</p>
+                        <div class="heart-particles" id="heart-particles">
+                            <!-- Heart particles will be generated by JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button id="back-calendar-btn" class="action-btn back-btn">
+                            <i class="fas fa-arrow-left"></i> Kembali
+                        </button>
+                        <a href="promise.html" style="text-decoration: none;">
+    <button id="promise-btn" class="action-btn promise-btn">
+        Janji Kita <i class="fas fa-gem"></i>
+    </button>
+</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p>Setiap hari bersamamu adalah hari yang spesial sayangg <i class="fas fa-heart" style="color: #ff6b8b;"></i></p>
+        </div>
+    </div>
+
+    <!-- Custom Cursor Elements -->
+    <div class="cursor-heart"></div>
+    <div class="cursor-trail"></div>
+    
+    <!-- JavaScript -->
+    <script src="calendar.js"></script>
+</body>
+</html>

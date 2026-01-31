@@ -1,0 +1,208 @@
+:root {
+    --peach-main: #ffe0d2;
+    --peach-soft: #fff1ea;
+    --peach-deep: #e8b7a3;
+    --brown-soft: #5a3d2b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+}
+
+/* ================= BACKGROUND ================= */
+.museum-stage {
+    width: 100%;
+    min-height: 100vh;
+    background: radial-gradient(circle at top, var(--peach-soft), var(--peach-main));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px 100px;
+}
+
+/* ================= TITLE ================= */
+.museum-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    color: var(--brown-soft);
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+/* ================= ROW ================= */
+.exhibition-row {
+    display: flex;
+    gap: 36px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* ================= FRAME ================= */
+.museum-frame {
+    width: 100%;
+    max-width: 200px;
+    background: linear-gradient(145deg, #fff7f2, #fbe3d6);
+    border-radius: 16px;
+    padding: 14px;
+    box-shadow: 0 20px 40px rgba(232,183,163,.45);
+    transition: all .45s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+.museum-frame::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 80px;
+    background: radial-gradient(circle, rgba(255,255,255,.9), transparent 70%);
+}
+
+.museum-frame:hover {
+    transform: translateY(-14px) scale(1.03);
+}
+
+/* ================= PHOTO SLOT ================= */
+.photo-slot {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* ================= PLAQUE ================= */
+.plaque {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    margin-top: 14px;
+    color: #8b5a44;
+    opacity: .7;
+}
+
+/* ================= NAV BUTTON ================= */
+.nav-btn {
+    position: fixed;
+    bottom: 40px;
+    padding: 14px 24px;
+    border-radius: 999px;
+    background: rgba(255,255,255,.65);
+    backdrop-filter: blur(8px);
+    border: none;
+    font-size: .9rem;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.nav-btn:hover {
+    transform: translateY(-4px) scale(1.05);
+}
+
+.prev { left: 40px; }
+.next { right: 40px; }
+
+/* ================= HEART CURSOR ================= */
+.heart-cursor {
+    position: fixed;
+    width: 18px;
+    height: 18px;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.heart-cursor::before {
+    content: "❤";
+    font-size: 18px;
+    color: #ff8fa3;
+}
+
+/* ================= HEART TRAIL ================= */
+.heart-trail {
+    position: fixed;
+    font-size: 14px;
+    color: rgba(255,143,163,.7);
+    animation: fadeHeart 1s ease forwards;
+    pointer-events: none;
+}
+
+@keyframes fadeHeart {
+    to {
+        opacity: 0;
+        transform: translateY(-30px) scale(.4);
+    }
+}
+
+/* ================= DETAIL OVERLAY ================= */
+.detail-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(255,224,210,.6);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.detail-overlay.hidden {
+    display: none;
+}
+
+.detail-frame {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 420px;
+    width: 90%;
+    text-align: center;
+    animation: zoomIn .6s ease;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width: 900px) {
+    .museum-title {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+
+    .exhibition-row {
+        gap: 24px;
+    }
+}
+
+/* HP */
+@media (max-width: 600px) {
+    .museum-title {
+        font-size: 1.6rem;
+    }
+
+    .museum-frame {
+        max-width: 160px;
+    }
+
+    .nav-btn {
+        bottom: 20px;
+        padding: 10px 18px;
+        font-size: .8rem;
+    }
+}

@@ -1,0 +1,476 @@
+/* ===============================
+   RESET & GLOBAL
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden; /* non-scroll */
+  background: linear-gradient(
+    135deg,
+    #ffd6e8,
+    #ffe3d3
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===============================
+   FLOATING PETALS PLACEHOLDER
+================================ */
+.petals-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ===============================
+   MAIN LANDING CONTENT
+================================ */
+.landing {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 40px 24px;
+  animation: fadeIn 1.4s ease;
+}
+
+/* ===============================
+   TEXT STYLE
+================================ */
+.title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3.2rem;
+  color: #7a2e4d;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  font-weight: 300;
+  color: #6b4a57;
+  opacity: 0.9;
+}
+
+/* ===============================
+   CTA BUTTON
+================================ */
+.cta-button {
+  margin-top: 40px;
+  padding: 14px 44px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+
+  color: #ffffff;
+  background: linear-gradient(
+    135deg,
+    #ff8fcf,
+    #ffb3d9
+  );
+
+  box-shadow:
+    0 8px 20px rgba(255, 140, 190, 0.4);
+
+  transition: 
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* Hover: bounce + glow */
+.cta-button:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow:
+    0 12px 30px rgba(255, 140, 190, 0.6);
+}
+
+/* Click feedback (tanpa JS) */
+.cta-button:active {
+  transform: scale(0.95);
+}
+
+/* ===============================
+   ANIMATION
+================================ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 480px) {
+  .title {
+    font-size: 2.6rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+
+  .cta-button {
+    padding: 12px 36px;
+    font-size: 0.95rem;
+  }
+}
+/* ===============================
+   CUSTOM HEART CURSOR
+================================ */
+body {
+  cursor: none;
+}
+
+.heart-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  background: #ff6fae;
+  transform: rotate(45deg);
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.15s ease;
+}
+
+.heart-cursor::before,
+.heart-cursor::after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background: #ff6fae;
+  border-radius: 50%;
+}
+
+.heart-cursor::before {
+  top: -11px;
+  left: 0;
+}
+
+.heart-cursor::after {
+  left: -11px;
+  top: 0;
+}
+
+/* Hover interactive */
+.cta-button:hover ~ .heart-cursor {
+  transform: rotate(45deg) scale(1.2);
+}
+
+/* ===============================
+   HEART TRAIL
+================================ */
+.heart-trail {
+  position: fixed;
+  font-size: 14px;
+  color: #ff8fcf;
+  pointer-events: none;
+  animation: trailFade 0.9s ease forwards;
+}
+
+@keyframes trailFade {
+  from {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-20px) scale(0.4);
+    opacity: 0;
+  }
+}
+
+/* ===============================
+   CLICK BURST HEART
+================================ */
+.heart-burst {
+  position: fixed;
+  font-size: 18px;
+  pointer-events: none;
+  animation: burst 1.2s ease forwards;
+}
+
+@keyframes burst {
+  0% {
+    transform: scale(0.6);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-80px) scale(1.4);
+    opacity: 0;
+  }
+}
+
+/* ===============================
+   FLOATING LILY PETALS
+================================ */
+.petal {
+  position: absolute;
+  top: -10%;
+  width: 18px;
+  height: 18px;
+
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(45deg);
+
+  filter: blur(1px);
+  opacity: 0.55;
+
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* Lily shape */
+.petal::before,
+.petal::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: inherit;
+  border-radius: 50%;
+}
+
+.petal::before {
+  top: -9px;
+  left: 0;
+}
+
+.petal::after {
+  left: -9px;
+  top: 0;
+}
+
+/* Falling animation */
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(45deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(120vh) rotate(405deg);
+    opacity: 0;
+  }
+}
+
+/* Custom Heart Cursor */
+body {
+    cursor: none !important;
+}
+
+.cursor-heart {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    pointer-events: none;
+    z-index: 9999;
+    font-size: 24px;
+    color: #ff6b8b;
+    text-shadow: 0 0 10px rgba(255, 107, 139, 0.7);
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease;
+    animation: heartbeat 1.2s infinite;
+}
+
+.cursor-trail {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 107, 139, 0.4);
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s, height 0.3s, opacity 0.3s;
+}
+
+.trail-dot {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 182, 193, 0.6);
+    pointer-events: none;
+    z-index: 9997;
+    transform: translate(-50%, -50%);
+    animation: fadeTrail 0.5s forwards;
+}
+
+@keyframes fadeTrail {
+    0% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    100% { opacity: 0; transform: translate(-50%, -50%) scale(0); }
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); }
+    25% { transform: translate(-50%, -50%) scale(1.1); }
+    50% { transform: translate(-50%, -50%) scale(1); }
+    75% { transform: translate(-50%, -50%) scale(1.05); }
+}
+
+/* Hover effects on interactive elements */
+button:hover ~ .cursor-heart,
+a:hover ~ .cursor-heart {
+    transform: translate(-50%, -50%) scale(1.5);
+    color: #ff3366;
+}
+
+/* Update Action Buttons dengan Desain Lucu */
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.action-btn {
+    padding: 18px 35px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 60px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    min-width: 180px;
+    justify-content: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.action-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.7s;
+    z-index: -1;
+}
+
+.action-btn:hover::before {
+    left: 100%;
+}
+
+.back-btn {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    color: #fff;
+    border: 3px solid #ff7b9c;
+}
+
+.back-btn:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 15px 25px rgba(255, 107, 139, 0.4);
+    background: linear-gradient(135deg, #ff7b9c 0%, #f8c0aa 100%);
+    letter-spacing: 1px;
+}
+
+.next-btn {
+    background: linear-gradient(135deg, #36d1dc 0%, #5b86e5 100%);
+    color: white;
+    border: 3px solid #36d1dc;
+}
+
+.next-btn:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 15px 25px rgba(54, 209, 220, 0.4);
+    background: linear-gradient(135deg, #2ab7c1 0%, #4a6fd8 100%);
+    letter-spacing: 1px;
+}
+
+/* Tambahkan icon yang lucu */
+.back-btn::after {
+    content: '👈';
+    position: absolute;
+    right: -30px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    font-size: 1.5rem;
+}
+
+.back-btn:hover::after {
+    right: 15px;
+    opacity: 1;
+}
+
+.next-btn::after {
+    content: '👉';
+    position: absolute;
+    left: -30px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    font-size: 1.5rem;
+}
+
+.next-btn:hover::after {
+    left: 15px;
+    opacity: 1;
+}
+
+/* Floating animation untuk button */
+@keyframes floatButton {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.action-btn {
+    animation: floatButton 4s ease-in-out infinite;
+}
+
+.next-btn {
+    animation-delay: 0.5s;
+}
+
+/* Responsive Design untuk Action Buttons */
+@media (max-width: 768px) {
+    .action-btn {
+        min-width: 160px;
+        padding: 16px 25px;
+        font-size: 1.1rem;
+    }
+    
+    .back-btn::after,
+    .next-btn::after {
+        display: none; /* Sembunyikan emoji pada mobile */
+    }
+}
+
+/* Efek khusus untuk kursor di tombol */
+button:hover {
+    cursor: none !important;
+}

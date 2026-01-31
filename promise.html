@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janji Kita sayangg 💕</title>
+    <link rel="stylesheet" href="promise.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="bg-elements">
+        <div class="floating-heart">💖</div>
+        <div class="floating-heart">💗</div>
+        <div class="floating-heart">💓</div>
+        <div class="floating-heart">💞</div>
+        <div class="floating-heart">🌸</div>
+        <div class="floating-heart">🌺</div>
+        <div class="floating-heart">🌷</div>
+        <div class="floating-heart">💐</div>
+    </div>
+    
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Promise Checklist Page -->
+        <div id="promise-page" class="page active">
+            <div class="card promise-card animate__animated animate__fadeIn">
+                <div class="header">
+                    <h1 class="title">Janji Kita sayangg❤️</h1>
+                    <p class="subtitle">Mari kita buat komitmen indah bersama 💖</p>
+                    <div class="promise-header">
+                        <div class="header-emoji">💝</div>
+                        <h2 class="promise-title">Checklist Cinta</h2>
+                        <div class="header-emoji">💌</div>
+                    </div>
+                </div>
+                
+                <!-- Progress Indicator -->
+                <div class="progress-container">
+                    <div class="progress-text">Progress Janji kitaa: <span id="progress-count">0</span>/4</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                </div>
+                
+                <!-- Promise Checklist -->
+                <div class="checklist-container">
+                    <div class="checklist-item" data-id="1">
+                        <div class="item-checkbox">
+                            <div class="checkbox-icon">○</div>
+                            <div class="checkbox-checked">✔</div>
+                        </div>
+                        <div class="item-content">
+                            <div class="item-emoji">🤍</div>
+                            <div class="item-text">
+                                <h3 class="item-title">Tetap Bersama</h3>
+                                <p class="item-desc">Melalui suka dan duka, kita akan selalu bersama</p>
+                            </div>
+                        </div>
+                        <div class="item-heart">💗</div>
+                    </div>
+                    
+                    <div class="checklist-item" data-id="2">
+                        <div class="item-checkbox">
+                            <div class="checkbox-icon">○</div>
+                            <div class="checkbox-checked">✔</div>
+                        </div>
+                        <div class="item-content">
+                            <div class="item-emoji">🌸</div>
+                            <div class="item-text">
+                                <h3 class="item-title">Banyak Tertawa</h3>
+                                <p class="item-desc">Mengisi hari-hari dengan kebahagiaan dan tawa kitaa bersamaa</p>
+                            </div>
+                        </div>
+                        <div class="item-heart">💗</div>
+                    </div>
+                    
+                    <div class="checklist-item" data-id="3">
+                        <div class="item-checkbox">
+                            <div class="checkbox-icon">○</div>
+                            <div class="checkbox-checked">✔</div>
+                        </div>
+                        <div class="item-content">
+                            <div class="item-emoji">💞</div>
+                            <div class="item-text">
+                                <h3 class="item-title">Mencinta Lebih Dalam</h3>
+                                <p class="item-desc">Mencintai dengan sepenuh hati dan jiwa</p>
+                            </div>
+                        </div>
+                        <div class="item-heart">💗</div>
+                    </div>
+                    
+                    <div class="checklist-item" data-id="4">
+                        <div class="item-checkbox">
+                            <div class="checkbox-icon">○</div>
+                            <div class="checkbox-checked">✔</div>
+                        </div>
+                        <div class="item-content">
+                            <div class="item-emoji">🌱</div>
+                            <div class="item-text">
+                                <h3 class="item-title">Tumbuh Bersama</h3>
+                                <p class="item-desc">support perkembangan masing-masing</p>
+                            </div>
+                        </div>
+                        <div class="item-heart">💗</div>
+                    </div>
+                </div>
+                
+                <!-- Completion Message -->
+                <div class="completion-message" id="completion-message">
+                    <div class="message-emoji">🎉</div>
+                    <p class="message-text">Semua janji telah disetujui! Cinta kita sempurna angett sayangg 😍💖</p>
+                </div>
+                
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <button id="back-promise-btn" class="action-btn back-btn">
+                        <i class="fas fa-arrow-left"></i> Kembali
+                    </button>
+                    <button id="flower-btn" class="action-btn flower-btn" disabled>
+                        <span class="btn-text">Sebuah Bunga untukmu</span>
+                        <span class="btn-emoji">🌸</span>
+                    </button>
+                    <button id="next-promise-btn" class="action-btn next-btn" disabled>
+                        Lanjut <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                
+                <div class="hint">
+                    <i class="fas fa-hand-point-up"></i> Klik setiap janji untuk menyetujuinya
+                </div>
+            </div>
+        </div>
+        
+        <!-- Flower Reveal Page -->
+        <div id="flower-page" class="page">
+            <div class="card flower-card">
+                <div class="flower-reveal">
+                    <div class="flower-animation" id="flower-animation">
+                        <!-- Flower will be animated here -->
+                    </div>
+                    
+                    <div class="reveal-content">
+                        <h2 class="flower-title">Untukmu, sayangg </h2>
+                        <div class="flower-message">
+                            <p class="flower-text">Seperti bunga yang selalu mekar di musim semi,</p>
+                            <p class="flower-text">Cintaku untuk dd cayanggg akan selalu tumbuh dan berkembang. hihhii</p>
+                            <p class="flower-text">Terima kasih yah sayangg sudah menjadi bagian dari hidupku 💖</p>
+                        </div>
+                        
+                        <div class="flower-quote">
+                            <div class="quote-icon">"</div>
+                            <p class="quote-text">Cinta kita tidak pernah berakhir, kita hanya sedang mencoba lagi dan lagi.</p>
+                            <div class="quote-icon">"</div>
+                        </div>
+                        
+                        <div class="action-buttons">
+                            <button id="back-flower-btn" class="action-btn back-btn" 
+                            onclick="window.location.href='calendar.html'">
+                                <i class="fas fa-arrow-left"></i> Kembali
+                            </button>
+                            <button id="final-next-btn" class="action-btn next-btn"
+                             onclick="window.location.href='museum_chamber.html'">
+                                Selesai <i class="fas fa-arrow-right"></i>
+                    </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p>Cinta sejati adalah pilihan yang kita buat setiap hari <i class="fas fa-heart" style="color: #ff6b8b;"></i></p>
+        </div>
+    </div>
+
+    <!-- Custom Cursor Elements -->
+    <div class="cursor-heart"></div>
+    <div class="cursor-trail"></div>
+    
+    
+    <!-- JavaScript -->
+    <script src="promise.js"></script>
+</body>
+</html>

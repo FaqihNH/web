@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hadiah Spesial Untukmu 🌸</title>
+    <link rel="stylesheet" href="flower-gift.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="bg-elements">
+        <div class="floating-petal">🌸</div>
+        <div class="floating-petal">🌺</div>
+        <div class="floating-petal">🌷</div>
+        <div class="floating-petal">💐</div>
+        <div class="floating-petal">🌼</div>
+        <div class="floating-petal">🌻</div>
+        <div class="floating-petal">🏵️</div>
+        <div class="floating-petal">🥀</div>
+    </div>
+    
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Gift Reveal Page -->
+        <div id="gift-page" class="page active">
+            <div class="card gift-card animate__animated animate__fadeIn">
+                <div class="header">
+                    <h1 class="title">Hadiah Spesial</h1>
+                    <p class="subtitle">Dari hatiku untuk hatimu 💕</p>
+                    <div class="gift-header">
+                        <div class="header-emoji">🎁</div>
+                        <h2 class="gift-title">Ada Kejutan!</h2>
+                        <div class="header-emoji">💝</div>
+                    </div>
+                </div>
+                
+                <div class="message-container">
+                    <div class="message-bubble">
+                        <p class="message-text">"Aku punya sesuatu buat kamu…"</p>
+                        <div class="message-emoji">💌</div>
+                    </div>
+                    
+                    <div class="gift-box">
+                        <div class="box-lid">
+                            <div class="ribbon"></div>
+                        </div>
+                        <div class="box-body">
+                            <div class="box-pattern">🌸</div>
+                        </div>
+                        <div class="box-shadow"></div>
+                    </div>
+                    
+                    <div class="action-container">
+                        <button id="open-gift-btn" class="gift-btn">
+                            <span class="btn-text">Buka Hadiahnya</span>
+                            <span class="btn-emoji">🌸</span>
+                            <div class="sparkle"></div>
+                        </button>
+                        
+                        <div class="hint">
+                            <i class="fas fa-gift"></i> Siap-siap untuk kejutan yang indah!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+       <!-- Flower Reveal Page -->
+<div id="flower-reveal-page" class="page">
+    <div class="blur-overlay"></div>
+    
+    <div class="flower-container">
+        <!-- Container untuk semua bagian bunga -->
+        <div class="flower-parts-container">
+            <!-- Tangkai - PALING BELAKANG -->
+            <div class="flower-stem"></div>
+            
+            <!-- Daun pada tangkai -->
+            <div class="flower-leaf leaf-left"></div>
+            <div class="flower-leaf leaf-right"></div>
+            
+            <!-- Kuncup Bunga (Awal) -->
+            <div class="flower-bud" id="flower-bud">
+                <div class="bud-center"></div>
+                <div class="bud-petal p1"></div>
+                <div class="bud-petal p2"></div>
+                <div class="bud-petal p3"></div>
+                <div class="bud-petal p4"></div>
+                <div class="bud-petal p5"></div>
+                <div class="bud-petal p6"></div>
+            </div>
+            
+            <!-- Kelopak Bunga Mekar - DI TENGAH -->
+            <div class="flower-petals" id="flower-petals">
+                <div class="flower-petal p1"></div>
+                <div class="flower-petal p2"></div>
+                <div class="flower-petal p3"></div>
+                <div class="flower-petal p4"></div>
+                <div class="flower-petal p5"></div>
+                <div class="flower-petal p6"></div>
+            </div>
+            
+            <!-- Pusat Bunga (Nektar) - PALING DEPAN -->
+            <div class="flower-center" id="flower-center">
+                <div class="center-detail"></div>
+                <div class="center-detail"></div>
+                <div class="center-detail"></div>
+                <div class="center-detail"></div>
+            </div>
+        </div>
+        
+        <!-- Falling Petals -->
+        <div class="petals-container" id="petals-container">
+            <!-- Petals will be generated by JavaScript -->
+        </div>
+        
+        <!-- Flower Message -->
+        <div class="flower-message-container" id="flower-message">
+            <div class="flower-message-bubble">
+                <div class="message-icon">💕</div>
+                <p class="flower-message-text">"Bunga ini untuk kamu, karena kamu rumah."</p>
+                <div class="message-signature">- Cintaku</div>
+            </div>
+        </div>
+        
+        <!-- Flower Interaction Hint -->
+        <div class="interaction-hint">
+            <i class="fas fa-mouse-pointer"></i> Coba hover di atas bunga
+        </div>
+        
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+            <button id="back-gift-btn" class="action-btn back-btn">
+                <i class="fas fa-arrow-left"></i> Kembali
+            </button>
+            <button id="next-gift-btn" class="action-btn next-btn">
+                Lanjutkan <i class="fas fa-heart"></i>
+            </button>
+        </div>
+    </div>
+</div> 
+        <!-- Footer -->
+        <div class="footer">
+            <p>Cinta sejati layaknya bunga yang selalu mekar dalam hati <i class="fas fa-heart" style="color: #ff6b8b;"></i></p>
+        </div>
+    </div>
+
+    <!-- Custom Cursor Elements -->
+    <div class="cursor-heart"></div>
+    <div class="cursor-trail"></div>
+    
+    <!-- JavaScript -->
+    <script src="flower-gift.js"></script>
+</body>
+</html>
